@@ -1,8 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color:aliceblue;
-    margin: 50px;
-    padding: 20px;
 }
 
 h1 {
@@ -15,6 +13,17 @@ p {
 
 .teste {
     color:  rgb(0, 102, 255);
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr ); 
+    gap: 10px;
 }
 
 #lista {
