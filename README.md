@@ -20,8 +20,9 @@ A estrutura deste repositório será organizada da seguinte forma:
 
 ```
     📁 DevFullStack-js │ 
-    ├── Ava/ 
-    │ └── Códigos
+    ├── Ava/
+    | ├── Códigos/
+    │ └── Projetos/
     ├── Aulas_síncronas/ 
     │ └── Códigos
     └── README.md 
