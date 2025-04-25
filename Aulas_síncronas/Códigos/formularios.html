@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulários</title>
+    </head>
+    <body>
+        <h1>Login</h1>
+
+        <!-- GET enviado pela url
+        POST enviado no corpo da mensagem. 
+    -->
+        <form action="/link_para_o_servidor.html" method="GET">
+
+            <!--Label associadar ao input, acessibilidade!-->
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email">
+
+            <!--Tipo de entrada input-->
+            <label for="senha">Senha:</label>
+            <input id="senha" type="password" name="password">
+
+            <br><br>
+            <p>Você aceita os termos de uso do sistema?</p>
+            <input type="radio" name="termo_de_uso" id="termo_de_uso_sim"
+                value="sim">
+            <label for="termo_de_uso_sim">Sim</label>
+
+            <input type="radio" name="termo_de_uso" id="termo_de_uso_não"
+                value="nao">
+            <label for="termo_de_uso_não">Não</label>
+
+            <input type="radio" name="termo_de_uso" id="termo_de_uso_não_li"
+                value="nao_li">
+            <label for="termo_de_uso_não_li">Não li o termo!</label>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
