@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      padding: 2%;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: antiquewhite;
+    }
+
+    h1,
+    p {
+      color: rgb(10, 10, 119);
+    }
+  </style>
+  <title>Torneio de Ciclismo</title>
+</head>
+
+<body>
+  <h1>Torneio de Ciclismo</h1>
+  <form action="/servidor.html" method="GET" target="_blank">
+    <h3>Formulário de inscrição</h3>
+    <p>Digite seu nome completo: </p>
+    <input type="text" id="nome_completo" name="nome_completo">
+    <br><br>
+    <hr>
+    <p>Data de nascimento</p>
+    <input type="date" id="data_nascimento" max="2007-12-31">
+    <br><br>
+    <hr>
+    <p>Escolha sua modalidade para competir:</p>
+    <input type="radio" id="mountain_bike" name="modalidade" value="mountain_bike"><label for="mountain_bike">Mountain
+      Bike</label><br>
+    <input type="radio" id="ciclismo_estrada" name="modalidade" value="ciclismo_estrada"><label
+      for="ciclismo_estrada">Ciclismo de estrada</label><br>
+    <hr>
+    <p>Qual o seu nível experiência?</p>
+    <input type="radio" id="ex_iniciante" name="experiencia" value="iniciante"> <label
+      for="ex_iniciante">Iniciante</label> <br>
+    <input type="radio" id="ex_intermediario" name="experiencia" value="intermediario"> <label
+      for="ex_intermediario">Intermediário</label><br>
+    <input type="radio" id="ex_avancado" name="experiencia" value="avancado"> <label
+      for="ex_avancado">Avançado</label><br>
+    <hr>
+    <p>Quais alimentos você precisa?</p>
+    <input type="checkbox" id="c_agua" name="c_agua" value="agua"> <label for="c_agua">Agua</label><br>
+    <input type="checkbox" id="c_lanche_rapido" name="c_lanche_rapido" value="lanche_rapido"> <label
+      for="c_lanche_rapido">Lanche rápido</label><br>
+    <input type="checkbox" id="c_lanche_reforcado" name="c_lanche_reforcado" value="lanche_reforcado"> <label
+      for="c_lanche_reforcado">Lanche reforçado</label><br>
+    <input type="checkbox" id="c_coca_cola" name="c_coca_cola" value="coca_cola"> <label for="c_coca_cola">Coca Cola sem
+      açucar</label><br>
+    <input type="checkbox" id="c_barra" name="c_barra" value="barra"> <label for="c_barra">Barra proteica</label>
+    <hr>
+    <p>Você confirma que leu e concorda com os termos e condições do torneio? </p>
+    <a href="termos.com">Condições do torneio</a><br><br>
+    <input type="radio" id="r_sim" name="aceite_termo" value="sim"> <label for="r_sim">Sim</label><br>
+    <input type="radio" id="r_não" name="aceite_termo" value="nao"> <label for="r_não">Não</label><br><br>
+    <input type="submit" value="Enviar Inscrição">
+  </form>
+</body>
+
+</html>
