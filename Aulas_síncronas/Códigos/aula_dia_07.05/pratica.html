@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Festival de Harmonia</title>
+</head>
+
+<body>
+  <h1>Festival de Harmonia</h1>
+  <div>
+    <h2>Formulário de inscrição</h2>
+    <form action="/" method="POST">
+      <label for="nome">Nome: </label><input type="text" id="nome" name="nome" placeholder="Digite seu nome..."> <br>
+      <br>
+      <label for="email">Email: </label><input type="email" id="email" name="email" placeholder="Digite seu email...">
+      <br> <br>
+
+      <label for="data_nascimento">Data de nascimento:</label> <br> <input type="date" max="1925-12-31"> <br> <br>
+
+      <label for="cor_credencial">Cor da credencial: </label> <input type="color" id="cor_credencial"> <br><br>
+
+      <label for="experiencia">Nível de experiência musical:</label> <br> <input type="range" name="experiencia"
+        id="experiencia" min="1" max="10"> <br><br>
+
+      <label for="telefone">Digite seu número: </label> <br> <input type="tel" name="telefone"
+        placeholder="Digite seu telefone..."> <br><br>
+
+      <label for="portfolio">Coloque aqui um link para o seu portfólio: </label> <br><input type="url" name="portfolio"
+        id="portfolio" placeholder="link para o seu portfolio..."> <br><br>
+
+      <label for="data_e_hora">Data e hora preferida preferida para o workshop:</label> <br> <input
+        type="datetime-local" name="data_e_hora" id="data_e_hora"> <br> <br>
+
+      <label for="disponibilidade">Mês de disponibilidade para apresentação: </label> <br> <input type="month"
+        name="disponibilidade" id="disponibilidade"> <br><br>
+
+      <label for="ensaios">Horário disponível para ensaio: </label> <br> <input type="time" name="ensaios" id="ensaios">
+      <br><br>
+
+      <label for="semana">Semana do festival que deseja participar: </label> <br> <input type="week" name="semana"
+        id="semana"> <br><br>
+
+      <label for="n_ingressos">Número de ingressos desejados: </label> <br>
+      <input type="number" name="n_ingressos" id="n_ingressos" placeholder="somente números"> <br><br>
+
+      <label for="b_genero">Digite abaixo os gêneros músicais de seu interesse: </label> <br> <input type="search"
+        name="b_genero" id="b_genero"> <br><br>
+
+      <input type="submit" value="Inscrever-se no Festival!">
+    </form>
+  </div>
+</body>
+
+</html>

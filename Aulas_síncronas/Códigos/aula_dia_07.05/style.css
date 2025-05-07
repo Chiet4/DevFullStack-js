@@ -1,0 +1,21 @@
+body {
+  font-family: Arial;
+  background-color: aliceblue;
+  margin: 15px;
+}
+
+h1{
+  color: brown;
+}
+
+h2 {
+  color: rgba(61, 1, 1, 0.8);
+}
+
+label {
+  color: rgba(61, 1, 1, 0.8);
+}
+
+input{
+  border-radius: 4px;
+}
