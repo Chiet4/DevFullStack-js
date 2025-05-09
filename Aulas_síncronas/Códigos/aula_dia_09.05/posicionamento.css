@@ -1,0 +1,33 @@
+div {
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid black; */
+  margin: 5px;
+  border-radius: 5px;
+}
+#div1 {
+  background: aqua;
+}
+#div2 {
+  background: grey;
+}
+#div3 {
+  background: yellow;
+}
+#div4 {
+  background: greenyellow;
+}
+#div5 {
+  background: pink;
+}
+#div6{
+  background: orangered;
+}
+#container{
+  border: 1px solid black;
+  width: 900px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
