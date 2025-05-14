@@ -4,6 +4,8 @@ div {
   /* border: 1px solid black; */
   margin: 5px;
   border-radius: 5px;
+  text-align: center;
+  align-content: center;
 }
 #div1 {
   background: aqua;
@@ -26,8 +28,9 @@ div {
 #container{
   border: 1px solid black;
   width: 900px;
-  height: 60px;
+  height: 200px;
   display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
+  background-color: beige;
+  place-content: center;
+  place-items: center;
 }
