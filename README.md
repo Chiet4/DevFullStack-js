@@ -21,10 +21,12 @@ A estrutura deste repositório será organizada da seguinte forma:
 ```
     📁 DevFullStack-js │ 
     ├── Ava/
-    | ├── Códigos/
+    | ├── Codigos-modulo-basico/
+    | ├── Codigos-modulo-intermediario/
     │ └── Projetos/
     ├── Aulas_síncronas/ 
-    │ └── Códigos
+    | ├── Codigos-modulo-intermediario/
+    │ └── Codigos-modulo-basico/
     |   └── aula_dia/
     └── README.md 
 ```
