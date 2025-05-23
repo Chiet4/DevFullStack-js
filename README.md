@@ -27,7 +27,6 @@ A estrutura deste repositório será organizada da seguinte forma:
     ├── Aulas_síncronas/ 
     | ├── Codigos-modulo-intermediario/
     │ └── Codigos-modulo-basico/
-    |   └── aula_dia/
     └── README.md 
 ```
 
