@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <style>
+    body {
+      place-self: center;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="pokemon" onclick="MudarImagem()"
+    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="pokemon">
+</body>
+
+<script>
+  let isEvoluido = false;
+  let urlBase = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+  function MudarImagem() {
+    let imagemAntiga = document.getElementById("pokemon");
+    if (isEvoluido) {
+      imagemAntiga.src = urlBase + "7.png"
+      isEvoluido = !isEvoluido
+    }
+    else{
+      imagemAntiga.src = urlBase + "8.png"
+      isEvoluido = !isEvoluido
+    }
+  }
+</script>
+
+</html>
