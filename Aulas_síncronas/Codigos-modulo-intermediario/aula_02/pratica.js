@@ -1,12 +1,10 @@
 let numeros = [];
 for (let i = 23; i < 54; i++) {
-  numeros.push(i);
+  numeros[i] = i;
+  console.log(numeros[i]);
 }
 
-numeros.forEach((element) => {
-  console.log(element);
-});
-console.log('\n-----------------')
+console.log("\n-----------------");
 let nomes = ["Dino", "Baby", "Charlote"];
 
 nomes.map((nome) => {

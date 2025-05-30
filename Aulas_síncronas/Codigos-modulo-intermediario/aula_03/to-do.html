@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do List</title>
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+
+    .botao {
+      background: aquamarine;
+    }
+
+    .comprado {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>
+    Lista de Compras
+  </h3>
+  <label for="novoProduto">Adicione um novo item a lista:</label><br>
+  <input id="novoProduto" type="text" placeholder="Adicione um item...">
+  <button class="botao" onclick="addProduto()">Adicionar</button>
+  <ul id="listasCompras">
+  </ul>
+</body>
+<script>
+  const listaCompras = document.getElementById("listasCompras");
+  const input = document.getElementById("novoProduto");
+
+  function addProduto() {
+    let novoItem = input.value.trim();
+    if (novoItem === "") return;
+
+    let element = document.createElement("li");
+    element.textContent = novoItem;
+
+    // Adicionando ao evento
+    element.addEventListener("click", e => {
+      element.classList.toggle("comprado");
+    });
+
+    listaCompras.appendChild(element);
+    input.value = '';
+    input.focus();
+  }
+</script>
+
+</html>
