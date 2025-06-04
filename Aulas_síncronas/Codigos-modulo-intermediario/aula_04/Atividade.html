@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade</title>
+</head>
+
+<body>
+  <div id="mensagens"></div>
+</body>
+<script>
+  let usuarios = [{
+    nome: "João",
+    evento: "Workshop de FullStack",
+    data: "10 de Dezembro de 2025",
+    horario: "14h",
+    local: "Auditório Central",
+    diasParaEvento: 6
+  },
+  {
+    nome: "Carlos",
+    evento: "Festa",
+    data: "7 de Junho de 2025",
+    horario: "19h",
+    local: "Praça Central",
+    diasParaEvento: 2
+  },
+  {
+    nome: "Maria",
+    evento: "Palestra FullStack",
+    data: "04 de Junho de 2025",
+    horario: "14h",
+    local: "Auditório Central",
+    diasParaEvento: 0
+  }
+  ]
+
+  let mensagem = usuarios.map(pessoa =>
+    `Olá ${pessoa.nome}! Estamos felizes em confirmar sua participação no evento "${pessoa.evento}". Ele acontecerá no dia ${pessoa.data}, às ${pessoa.horario}, no ${pessoa.local}. Faltam apenas ${pessoa.diasParaEvento} dias! ${pessoa.diasParaEvento === 0 ? 'O Evento é hoje! Não perca! 🎉' : 'Vamos lá! 🚀'}`
+  );
+
+  // console.log(mensagem)  
+  let text = document.getElementById("mensagens");
+
+  mensagem.forEach(texto => {
+    let paragrafo = document.createElement("p");
+    paragrafo.textContent = texto;
+    text.appendChild(paragrafo);
+  });
+
+</script>
+
+</html>

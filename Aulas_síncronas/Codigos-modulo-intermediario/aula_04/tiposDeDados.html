@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos e Arrays</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // Objects 
+  let usuario = {
+    nome: "João",
+    idade: 34,
+    curso: "Full Stack",
+    isAtivo: true
+  }
+
+  // console.log(usuario.nome + " | " + usuario.idade);
+  // console.log(usuario['curso'])
+
+  for (let chave in usuario) {
+    console.log(chave + " com valor: " + usuario[chave]);
+  }
+
+  // Arrays
+  let numerosMegaSena = [12, 44, 22, 66, 43, 72];
+  for (let n in numerosMegaSena) {
+    console.log(numerosMegaSena[n]);
+  }
+
+  // Array dentro de objeto
+  let pessoa = {
+    nome: "Maria",
+    telefones: ["88123456789", "88987654321"]
+  }
+
+  console.log("O nome da pessoa é: " + pessoa.nome);
+  console.log("Os numeros são: " + pessoa.telefones[0] + " | " + pessoa.telefones[1])
+
+  // objeto dentro de array
+  let usuarios = [
+    { nome: "João", curso: "Full Stack" },
+    { nome: "Maria", curso: "DevOps" }
+  ]
+  console.log(usuarios[0].nome)
+
+
+  // Map
+  let notasAlunos = [9.5, 10, 4.75, 9.99, 8.45]
+  const novasNotas = notasAlunos.map(nota => {
+    return nota + 0.5
+  })
+
+  console.log(novasNotas)
+
+  // filter
+
+  const alunosAprovados = notasAlunos.filter(nota => {
+    // precisa retorna uma conição. true ou false
+    return nota >= 8
+  })
+
+  console.log(alunosAprovados)
+
+  // Strings
+
+  let nomesEstudantes = ["Maria", "João", "Lucas", "Jesus"]
+  const nome = nomesEstudantes.filter(nome => {
+    return nome === "Jesus"
+  })
+  console.log(nome)
+
+  // Template Literals
+  
+</script>
+
+</html>
