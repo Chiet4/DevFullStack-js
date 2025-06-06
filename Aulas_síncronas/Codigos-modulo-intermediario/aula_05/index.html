@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Cartão de Visita</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    main {
+      max-width: 31.25rem;
+      margin: 1.87rem auto;
+      padding: 1.25rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button,
+    #limpar {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 10px;
+      background-color: #25bf2a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #limpar {
+      width: 9rem;
+      background-color: #25bf2a;
+    }
+
+    button:hover,
+    #limpar:hover {
+      background-color: #369b39;
+      transform: scale(1.02);
+    }
+
+    #resultado {
+      margin-top: 1.25rem;
+    }
+
+    .cartao {
+      background-color: #e7ffe7;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Gerador de Cartão de Visita</h1>
+    <label for="nome_input">Nome:</label>
+    <input type="text" id="nome_input">
+
+    <label for="ocupacao_input">Ocupação:</label>
+    <input type="text" id="ocupacao_input">
+
+    <label for="contato_input">Contato:</label>
+    <input type="text" id="contato_input">
+
+    <button onclick="gerarCartao()">Gerar Cartão</button>
+    <button id="limpar" onclick="limparCartao()">Limpar</button>
+    <h2 id="titulo_cartao" style="display: none;">Seu cartão:</h2>
+    <div id="resultado"></div>
+  </main>
+
+  <script>
+    function gerarCartao() {
+      const nome = document.getElementById("nome_input").value;
+      const ocupacao = document.getElementById("ocupacao_input").value;
+      const contato = document.getElementById("contato_input").value;
+
+      if (nome && ocupacao && contato) {
+        document.getElementById("titulo_cartao").style.display = "block";
+
+        document.getElementById("resultado").innerHTML = `
+        <div class="cartao">
+          <strong>${nome}</strong><br>
+          <strong>Ocupação:</strong> ${ocupacao}<br>
+          <strong>Contato:</strong> ${contato}
+        </div>
+      `;
+
+        document.getElementById("nome_input").value = "";
+        document.getElementById("ocupacao_input").value = "";
+        document.getElementById("contato_input").value = "";
+      } else {
+        alert("Preencha todos os campos para gerar o cartão.");
+      }
+    }
+    function limparCartao() {
+      document.getElementById("titulo_cartao").style.display = "none";
+      document.getElementById("resultado").innerHTML = "";
+    }
+  </script>
+
+</body>
+
+</html>
