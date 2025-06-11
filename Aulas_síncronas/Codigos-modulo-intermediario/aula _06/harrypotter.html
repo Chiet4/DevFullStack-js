@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personagens de Harry Potter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .personagem {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: white;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .personagem img {
+      width: 170px;
+      height: 250px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .personagem img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Personagens de Harry Potter</h1>
+  <div id="container"></div>
+</body>
+
+<script>
+  async function carregarPersonagensHP() {
+    const container = document.getElementById("container");
+    const resposta = await fetch("https://hp-api.onrender.com/api/characters");
+    const personagens = await resposta.json();
+
+    personagens.forEach(personagem => {
+      const divNova = document.createElement("div");
+      divNova.className = "personagem";
+
+      const imagem = document.createElement("img");
+      imagem.src = personagem.image || "img/image.png";
+
+      const dadosCompletos = `
+          <h3>${personagem.name}</h3>
+          <p><strong>Casa:</strong> ${personagem.house || "Sem casa"}</p>
+          <p><strong>Espécie:</strong> ${personagem.species}</p>
+          <p><strong>Nascimento:</strong> ${personagem.dateOfBirth || "Desconhecido"}</p>
+          <p><strong>Patrono:</strong> ${personagem.patronus || "Nenhum"}</p>
+          <p><strong>Bruxo:</strong> ${personagem.wizard ? "Sim" : "Não"}</p>
+          <p><strong>Ator:</strong> ${personagem.actor || "Desconhecido"}</p>
+          <p><strong>Vivo:</strong> ${personagem.alive ? "Sim" : "Não"}</p>
+        `;
+
+      divNova.appendChild(imagem);
+      divNova.innerHTML += dadosCompletos;
+      container.appendChild(divNova);
+    });
+  }
+  carregarPersonagensHP();
+
+</script>
+
+</html>

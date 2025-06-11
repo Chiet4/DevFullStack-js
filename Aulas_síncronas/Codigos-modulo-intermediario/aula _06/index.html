@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 6</title>
+  <style>
+    #container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .centralizar {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <input id="termobusca" type="text" placeholder="Digite o nome do personagem"><br>
+  <button onclick="CriarVisualizacaoHTML()">Buscar</button>
+  <div id="container"></div>
+
+  <script>
+    async function getDataPersonagem() {
+      const termoBusca = document.getElementById("termobusca").value;
+      const respostaHTTP = await fetch(`https://rickandmortyapi.com/api/character/?name=${termoBusca}`);
+
+      if (respostaHTTP.ok) {
+        const dadosPersonagens = await respostaHTTP.json();
+
+        // Tem result? 
+        if (dadosPersonagens.results && dadosPersonagens.results.length > 0) {
+          return dadosPersonagens.results;
+        } else {
+          alert("Nenhum personagem encontrado.");
+          return [];
+        }
+      } else {
+        alert("Personagem não encontrado ou erro na API.");
+        return [];
+      }
+    }
+
+    async function CriarVisualizacaoHTML() {
+      const personagens = await getDataPersonagem();
+      const principal = document.getElementById("container");
+
+      // Limpar antes de mostrar novos resultados
+      principal.innerHTML = "";
+
+      personagens.forEach((personagem) => {
+        const personagemIMG = document.createElement("img");
+        const personagemP = document.createElement("p");
+        const personagemDiv = document.createElement("div");
+
+        personagemIMG.src = personagem.image;
+        personagemP.innerText = `Nome: ${personagem.name} | Status: ${personagem.status} | Espécie: ${personagem.species}`;
+
+        personagemDiv.appendChild(personagemIMG);
+        personagemDiv.appendChild(personagemP);
+
+        principal.appendChild(personagemDiv);
+      });
+    }
+  </script>
+</body>
+</html>
