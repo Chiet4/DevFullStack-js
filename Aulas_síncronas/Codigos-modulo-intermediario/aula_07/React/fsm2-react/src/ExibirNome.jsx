@@ -1,8 +1,8 @@
 
 export default function ExibirNome(){
   return (
-    <footer>
-      <p>Anchieta Albano</p>
-    </footer>
+    <div>
+      <h1>Anchieta Albano</h1>
+    </div>
   )
 }
