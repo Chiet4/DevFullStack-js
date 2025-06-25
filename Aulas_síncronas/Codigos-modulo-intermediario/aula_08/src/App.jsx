@@ -9,6 +9,8 @@ import {
 import MaoDeDados from "./components/MaoDeDados";
 import Pokemon from "./components/Pokemon";
 import PokemomAvancado from "./components/PokemonAvancado";
+import GerenciamentoEstado from "./components/GerenciamentoEstado"
+import CarinhaFeliz from "./components/CarinhaFeliz";
 
 function App() {
   return (
@@ -31,7 +33,10 @@ function App() {
       </p>
 
       <MaoDeDados /> */}
-      <PokemomAvancado></PokemomAvancado>
+      {/* <PokemomAvancado></PokemomAvancado> */}
+      <Pokemon></Pokemon>
+      <GerenciamentoEstado></GerenciamentoEstado>
+      <CarinhaFeliz></CarinhaFeliz>
     </>
   );
 }
