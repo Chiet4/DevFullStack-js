@@ -11,7 +11,8 @@ import Pokemon from "./components/Pokemon";
 import PokemomAvancado from "./components/PokemonAvancado";
 import GerenciamentoEstado from "./components/GerenciamentoEstado"
 import CarinhaFeliz from "./components/CarinhaFeliz";
-
+import TodoList
+ from "./components/TodoList";
 function App() {
   return (
     <>
@@ -34,9 +35,10 @@ function App() {
 
       <MaoDeDados /> */}
       {/* <PokemomAvancado></PokemomAvancado> */}
-      <Pokemon></Pokemon>
+      {/* <Pokemon></Pokemon>
       <GerenciamentoEstado></GerenciamentoEstado>
-      <CarinhaFeliz></CarinhaFeliz>
+      <CarinhaFeliz></CarinhaFeliz> */}
+      <TodoList></TodoList>
     </>
   );
 }
