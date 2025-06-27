@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Pokemon.css";
+import { useParams } from "react-router-dom";
 
 export default function Pokemon() {
+
   const [pokemon, setPokemon] = useState(1);
 
   const gerarNovoPokemon = () => {

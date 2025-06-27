@@ -37,6 +37,27 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+
+.menu nav {
+  display: inline-flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+.menu nav a {
+  float: left;
+}
+
+.menu nav a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.menu nav a:hover {
+  background-color: #db5656;
 }

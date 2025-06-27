@@ -11,34 +11,42 @@ import Pokemon from "./components/Pokemon";
 import PokemomAvancado from "./components/PokemonAvancado";
 import GerenciamentoEstado from "./components/GerenciamentoEstado"
 import CarinhaFeliz from "./components/CarinhaFeliz";
+import ExibirPokemon from "./components/ExibirPokemon"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home"
 import TodoList
  from "./components/TodoList";
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <>
-      {/* <h1>FSM2 - FullStack</h1>
-      <BoasVindas primeiroNome = "João" segundoNome = "Pedro"></BoasVindas>
-
-      <h2>Calculadora</h2>
-      <p>
-        <Somar valor1={10} valor2={5} />
-      </p>
-      <p>
-        <Subtrair valor1={10} valor2={5} />
-      </p>
-      <p>
-        <Multiplicar valor1={10} valor2={5} />
-      </p>
-      <p>
-        <Dividir valor1={10} valor2={5} />
-      </p>
-
-      <MaoDeDados /> */}
-      {/* <PokemomAvancado></PokemomAvancado> */}
-      {/* <Pokemon></Pokemon>
-      <GerenciamentoEstado></GerenciamentoEstado>
-      <CarinhaFeliz></CarinhaFeliz> */}
-      <TodoList></TodoList>
+    <BrowserRouter>
+    <div className="menu">
+      <nav>
+        <a href="/"> Home</a>
+        <a href="/boasvindas">Boas Vindas</a>
+        <a href="/maodedados">Mão de Dados</a>
+        <a href="/pokemonavancado">Pokemon Avancado</a>
+        <a href="/pokemon">Pokemon</a>
+        <a href="/gerenciamentoestado">Gerenciamento de Estado</a>
+        <a href="/carinhafeliz">Carinha Feliz</a>
+        <a href="/todolist">Todo List</a>
+      </nav>
+    </div>
+    <Routes>
+      <Route path="/" element={<Home/>}></Route>
+      <Route path="/boasvindas" element={<BoasVindas primeiroNome = "Sem nome" segundoNome = "Sem sobrenome"></BoasVindas>}></Route>
+      <Route path="/boasvindas/:nomeusuario" element={<BoasVindas primeiroNome = "Sem nome" segundoNome = "Sem sobrenome"></BoasVindas>}></Route>
+      <Route path="/maodedados" element={<MaoDeDados />}></Route>
+      <Route path="/pokemonavancado" element={ <PokemomAvancado></PokemomAvancado>}></Route>
+      <Route path="/pokemon" element={<Pokemon></Pokemon>}></Route>
+      <Route path="/pokemon/:id" element={<ExibirPokemon/>}></Route>
+      <Route path="/gerenciamentoestado" element={<GerenciamentoEstado></GerenciamentoEstado>}></Route>
+      <Route path="/carinhafeliz" element={<CarinhaFeliz></CarinhaFeliz> }></Route>
+      <Route path="/todolist" element={<TodoList></TodoList>}></Route>
+      <Route path="*" element={<NotFound/>}/>
+    </Routes>
+    </BrowserRouter>
     </>
   );
 }
