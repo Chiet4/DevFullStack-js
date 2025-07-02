@@ -17,6 +17,8 @@ import Home from "./components/Home"
 import TodoList
  from "./components/TodoList";
 import NotFound from "./components/NotFound";
+import Teste_useeffect from "./components/Teste_useeffect";
+import PersonagensRickAndMory from "./components/PersonagensRickAndMory";
 function App() {
   return (
     <>
@@ -28,7 +30,9 @@ function App() {
         <a href="/maodedados">Mão de Dados</a>
         <a href="/pokemonavancado">Pokemon Avancado</a>
         <a href="/pokemon">Pokemon</a>
+        <a href="/teste_useeffect">Use Effect</a>
         <a href="/gerenciamentoestado">Gerenciamento de Estado</a>
+        <a href="/rickandmorty">Rick & Morty</a>
         <a href="/carinhafeliz">Carinha Feliz</a>
         <a href="/todolist">Todo List</a>
       </nav>
@@ -41,6 +45,8 @@ function App() {
       <Route path="/pokemonavancado" element={ <PokemomAvancado></PokemomAvancado>}></Route>
       <Route path="/pokemon" element={<Pokemon></Pokemon>}></Route>
       <Route path="/pokemon/:id" element={<ExibirPokemon/>}></Route>
+      <Route path="/teste_useeffect" element={<Teste_useeffect></Teste_useeffect>}></Route>
+      <Route path="/rickandmorty" element={<PersonagensRickAndMory></PersonagensRickAndMory>}></Route>
       <Route path="/gerenciamentoestado" element={<GerenciamentoEstado></GerenciamentoEstado>}></Route>
       <Route path="/carinhafeliz" element={<CarinhaFeliz></CarinhaFeliz> }></Route>
       <Route path="/todolist" element={<TodoList></TodoList>}></Route>
